@@ -1,0 +1,18 @@
+<header class="header">
+	<div class="header-section">
+		<span class="cross top"></span>
+		<aside class="aside">
+			<h2>{{widget('profile', 'headeraddress', { 'profileType': 'address' })|raw}}</h2>
+		</aside>
+		<div class="centre">
+			<h1>{{widget('companyname', 'companyname', {"business": "NORTH"})|raw}}</h1>
+		</div>
+		<aside class="aside">
+			<h2>{{widget('clicktocall', 'headercall', {phoneText: 'TEL: 0800 123 123'})|raw}}</h2>
+		</aside>
+		<span class="cross bottom"></span>
+	</div>
+</header>
+<nav class="nav">
+	{{widget('extendednavigation', 'navigationheader', {})|raw}}
+</nav>

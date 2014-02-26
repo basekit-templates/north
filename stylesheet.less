@@ -388,7 +388,7 @@ button.btn,
 body {
 	background-color: @color-swatch1;
 	background-image: image('/images/wood-bg.jpg');
-	background-size: 100% auto;
+	background-size: cover;
 	background-attachment: fixed;
 	padding: 2%;
 	-webkit-font-smoothing: antialiased;
@@ -412,22 +412,13 @@ body {
 	padding: 2em;
 	clear: both;
 	.menu-items {
-		column-count: 3;
         column-gap: 80px;
-        -moz-column-count: 3;
         -moz-column-gap: 80px; 
-        -webkit-column-count: 3;
         -webkit-column-gap: 80px;
 		.menu-item {
 			padding: 1px 20px 45px;
 		}
 		li {
-			break-inside: avoid;
-	        -webkit-column-break-inside: avoid;
-	        -moz-column-break-inside: avoid;
-	        -ms-column-break-inside: avoid;
-	        -o-column-break-inside: avoid;
-	        page-break-inside: avoid;
 			padding: 2em 1em !important;
 		}
 	}
@@ -475,11 +466,11 @@ body {
 	}
 }
 
-.header, .nav {
+.bk-header, .nav {
 	text-align: center;
 	clear: both;
 }
-.header {
+.bk-header {
 	border: 1px solid fade(@color-swatch5, 50%);
 	float: left;
 	width: 100%;
@@ -512,7 +503,7 @@ body {
 	padding: 2em 0;
 }
 
-.header, .footer {
+.bk-header, .bk-footer {
 	h2, .content, h2 > div {
 		color: @color-swatch5;
 	}
@@ -533,7 +524,7 @@ body {
 .right {
 	text-align: right;
 }
-.footer {
+.bk-footer {
 	border: 1px solid fade(@color-swatch5, 50%);
 	clear: both;
 	margin-top: 2em;
@@ -582,7 +573,7 @@ body {
 /*	===============================
 	Design specific
 	=============================== */
-.header, .footer {
+.bk-header, .bk-footer {
 	h2 {
 		position: relative;
 		display: inline;
@@ -675,6 +666,9 @@ span.cross {
 .widget.menusections {
 	margin: 40px 0px;
 	text-align: center;
+	a {
+		font-size: bkscale(@font-swatch5-font-size, 1.1);
+	}
 }
 
 .widget.extendednavigation ul li a:after, .widget.extendednavigation ul li.folder span.text:after {
@@ -936,7 +930,7 @@ a.blog-post-more-link, .blog-list-footer a {
 	Media queries
 	=============================== */
 @media @tablet {
-	.header {
+	.bk-header {
 		.left {
 			display: none;
 		}
@@ -1003,7 +997,7 @@ a.blog-post-more-link, .blog-list-footer a {
 	.item {
 		width: 92%;
 	}
-	.footer {
+	.bk-footer {
 		.aside {
 			text-align: center;
 		}
@@ -1026,6 +1020,7 @@ a.blog-post-more-link, .blog-list-footer a {
 		&.companyname a {
 			font-size: bkscale(@font-swatch5-font-size, 3);
 			letter-spacing: 8px;
+			line-height: 52px;
 			margin: 0.2em 0 0;
 		}
 		&.clicktocall a {
@@ -1034,7 +1029,7 @@ a.blog-post-more-link, .blog-list-footer a {
 			border: none;
 		}
 	}
-	.header {
+	.bk-header {
 		h2 > div > span, .widget.clicktocall a {
 			font-size: bkscale(@font-swatch5-font-size, 1.1);
 		}

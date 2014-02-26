@@ -1,7 +1,7 @@
 {
-	"name":"Leaf Avenue",
-	"thumbnail":"leafavenue.png",
-	"screenshot":"leafavenue.png",
+	"name":"North",
+	"thumbnail":"north.png",
+	"screenshot":"north.png",
     "tags": {
     "en": ["minimal", "clean", "photography", "vintage", "modern", "dark", "studio", "website", "creative", "elegant", "professional", "unique", "media", "sans-serif"],
     "es": ["minimalista", "limpio", "fotografico", "vintage", "moderno", "oscuro", "estudio", "website", "creativo", "elegante", "profesional", "unico", "comunicacion", "sans-serif"],
@@ -10,8 +10,8 @@
     "colorSwatches":
     {
         "Swatch 1": {
-            "color1":"#4a979d",
-            "color2":"#4a979d",
+            "color1":"#b8885f",
+            "color2":"#ffffff",
             "color3":"#b8885f",
             "color4":"#b8885f",
             "color5":"#7e7e7e",

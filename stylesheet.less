@@ -49,19 +49,6 @@ h1 {
 	font-size: @font-swatch1-font-size;
 	padding-bottom: 0;
 }
-h2, h2 > div > span {
-	font-family:@font-swatch5-font-family; 
-	font-weight: @font-swatch5-font-weight; 
-	color: @font-swatch4-color; 
-	line-height:@font-swatch5-line-height; 
-	letter-spacing: @font-swatch5-letter-spacing; 
-	font-size: @font-swatch5-font-size;
-}
-h2 > div > span {
-	color: @color-swatch4;
-	font-family:@font-swatch1-font-family;
-	font-size: bkscale(@font-swatch5-font-size, 1.2);
-}
 h3 {
 	font-family:@font-swatch3-font-family; 
 	font-weight: @font-swatch3-font-weight; 
@@ -408,32 +395,40 @@ body {
 	padding: 0 8%;
 }
 
+.widget.menu .menu-items {
+    column-gap: 80px;
+    -moz-column-gap: 80px; 
+    -webkit-column-gap: 80px;
+    .menu-item-promoted {
+		padding: 25px;
+	}
+}
+
 .main {
 	padding: 2em;
 	clear: both;
-	.menu-items {
-        column-gap: 80px;
-        -moz-column-gap: 80px; 
-        -webkit-column-gap: 80px;
-		.menu-item {
-			padding: 1px 20px 45px;
-		}
-		li {
-			padding: 2em 1em !important;
-		}
-	}
 	.menu-subsection {
 		list-style: none;
 		text-align: center;
+		padding: 2% 4%;
 		h2 {
 			color: @color-swatch4;
 			font-size: @font-swatch4-font-size;
 		}
 		.menu-subsection-header {
-			margin-bottom: 1em;
+			margin-bottom: 4em;
 			h2 {
 				margin-top: 1em;
 				line-height: @font-swatch4-line-height;
+				padding-bottom: 1em;
+				&:after {
+                    content: "";
+                    border-bottom: 1px solid fade(@color-swatch5, 65%);
+                    height: 1px;
+                    width: 25%;
+                    display: block;
+                    margin: 20px auto 0;  
+                }  
 			}
 		}
 	}
@@ -512,10 +507,6 @@ body {
 	text-align: center;
 	a {
 		color: @color-swatch4;
-	}
-	svg {
-		width: 27px;
-		height: 34px;
 	}
 }
 .left {
@@ -664,7 +655,7 @@ span.cross {
 	clear: both;
 }
 .widget.menusections {
-	margin: 40px 0px;
+	margin: 30px 0px 40px;
 	text-align: center;
 	a {
 		font-size: bkscale(@font-swatch5-font-size, 1.1);
@@ -710,10 +701,17 @@ span.cross {
 	}
 }
 .menu-header {
-	border-bottom: 1px solid fade(@color-swatch5, 25%);
 	padding: 1em 0;
-	margin-bottom: 2em;
+	margin-bottom: 3em;
 	text-align: center;
+	&:after {
+        content: "";
+        border-bottom: 1px solid fade(@color-swatch5, 25%);
+        height: 1px;
+        width: 50%;
+        display: block;
+        margin: 20px auto 0;  
+    }   
 }
 .menu-item .icon {
 	position: relative;
@@ -985,10 +983,6 @@ a.blog-post-more-link, .blog-list-footer a {
 			-moz-column-count: 1;
 			column-count: 1;
 		}
-		.menu-item {
-			padding: 1px 20px 45px;
-			
-		}
 	}
 	.column, .column:nth-of-type(1) {
 		border-right: 0;
@@ -1014,6 +1008,16 @@ a.blog-post-more-link, .blog-list-footer a {
 	.main .menu-item img {
 		width: 100%;
 	}
+	.widget.menusections {
+	ul li {
+		border-bottom: 1px solid fade(@color-swatch5, 15%);
+		display: block;
+		padding: 18px 0;
+		margin: 0;
+		text-align: center;
+		width: 100%;
+	}
+}
 }
 @media @mobile {
 	.widget {
@@ -1029,9 +1033,12 @@ a.blog-post-more-link, .blog-list-footer a {
 			border: none;
 		}
 	}
-	.bk-header {
-		h2 > div > span, .widget.clicktocall a {
-			font-size: bkscale(@font-swatch5-font-size, 1.1);
+		.bk-header {
+			h2 > div > span, .widget.clicktocall a {
+				font-size: bkscale(@font-swatch5-font-size, 1.1);
+			}
 		}
+	.main {
+		padding: 2em;
 	}
 }
